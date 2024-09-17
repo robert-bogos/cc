@@ -123,6 +123,18 @@ const locales = {
   cis_en: { ietf: 'en', tk: 'pps7abe.css' },
 };
 
+const stageDomainsMap = {
+  'www.stage.adobe.com': {
+    'www.adobe.com': 'origin',
+  },
+  '--cc--adobecom.hlx.live': {
+    'www.adobe.com': 'origin',
+  },
+  '--cc--adobecom.hlx.page': {
+    'www.adobe.com': 'origin',
+  },
+};
+
 // Add any config options.
 const CONFIG = {
   contentRoot: '/cc-shared',
@@ -155,6 +167,7 @@ const CONFIG = {
     /www\.adobe\.com\/(\w\w(_\w\w)?\/)?express(\/.*)?/,
     /www\.adobe\.com\/(\w\w(_\w\w)?\/)?go(\/.*)?/,
   ],
+  stageDomainsMap,
 };
 
 /*
